@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Exec_Broker";
+
+// The greeting service definition.
+service Exec_Control {
+  // Update Notification from the Worker nodes.
+  rpc WkrUpdate (WkrUpdateData) returns (WkrUpdateResp);
+}
+
+// The request message containing the user's name.
+message WkrUpdateData {
+  string wkr_identifier = 1;
+  string wkr_hostname = 2;
+  string wkr_hostip = 3;
+  int32 num_processes = 4;
+  int32 max_mem = 5;
+  int32 used_mem = 6;
+  google.protobuf.Timestamp wkr_start = 7;
+  bool is_healthy = 8;
+  string health_message = 9;
+}
+
+// The response message containing the greetings.
+message WkrUpdateResp {
+  string instruction = 1;
+}

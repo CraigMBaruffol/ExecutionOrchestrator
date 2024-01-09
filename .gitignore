@@ -2,3 +2,5 @@ ExecutionOrchestrator/.vs/
 ExecutionOrchestrator/Exec_Broker/bin/
 ExecutionOrchestrator/Exec_Broker/obj/
 ExecutionOrchestrator/Exec_Worker/obj/
+ExecutionOrchestrator/Exec_Worker/bin/
+ExecutionOrchestrator/Libraries/ServerDB/obj/
